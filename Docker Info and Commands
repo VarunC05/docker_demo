@@ -1,0 +1,34 @@
+ Docker	
+     - Dockerization is the process of packing,deploying and running the application using Docker containers.
+     - Docker is an open-source tool to ship the application with all the necessary functionalities as one package.
+     - A Docker will pack the application with all the functionalities (i.e, libraries) and ship it in one package (i.e, container). Containers are created from the 
+	images that specifies the content.
+     - There are two parts of Docker :
+	     - The Docker Engine :- a portable packaging tool
+	     - The Docker Hub :- a cloud service for sharing application
+     - Docker simplifies the way of deploying application by not distributing the sourse code instead it sends the binary image of part of the disk. It runs the
+       application unmodified on any cloud. 
+     - Docker containers are sand-boxed environments(isolated VMs) that runs on kernel.
+
+*************Docker Commands*************
+# docker --version : to check the version of docker installed in the system
+# docker build -t <'.jar file'> . 				     :- to build an image
+# docker image ls 						     :- to check the list of created images
+# docker run -p <'docker port no'>:<'app port no.'> <'.jar file'>    :- to run the jar file
+# docker compose up -d <'java_db'>  				     :- to run the container    ['java_db' is the name you give for db configurations]
+# docker ps -a    						     :- to check if container is running or not
+# docker compose build   					     :- to build an image with docker_compose.yml file
+# docker compose up 						     :- to run all the container
+
+#clean package -DskipTests : to skip tests while building jar file   :- to build jar/war file by skipping test cases
+
+*****************Connect DB from docker****************
+-docker container ls
+-docker exec -it <'container ID'> /bin/bash
+-psql -U postgres
+-\c <'db name'>
+
+
+
+
+	
